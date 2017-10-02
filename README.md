@@ -1,4 +1,4 @@
-# ASP.NET Core - Sync to Ascyn
+# ASP.NET Core - Sync to Async
 
 This is a demo app showing sync versus async calls with ASP.NET Core and Entity Framework Core. It also includes a simple Angular app that consumes the data. You can view a Play-by-Play course about the topic on Pluralsight.com:
 
