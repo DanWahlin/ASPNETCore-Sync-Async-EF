@@ -1,10 +1,8 @@
-﻿using ASPNETCore_Sync_Async_EF.Models;
-using ASPNETCore_Sync_Async_EF.Repository;
+﻿using ASPNETCore_Sync_Async_EF.Repository;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ASPNETCore_Sync_Async_EF.Apis
