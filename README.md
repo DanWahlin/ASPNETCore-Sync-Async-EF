@@ -12,5 +12,5 @@ One size NEVER fits all so don't assume that migrating sync code to async will p
 
 ## Requirements
 
-* ASP.NET Core 1.0 or higher
+* ASP.NET Core 2.1 or higher
 
