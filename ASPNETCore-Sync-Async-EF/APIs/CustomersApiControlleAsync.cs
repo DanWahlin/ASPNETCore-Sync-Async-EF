@@ -1,10 +1,8 @@
-﻿using ASPNETCore_Sync_Async_EF.Models;
-using ASPNETCore_Sync_Async_EF.Repository;
+﻿using ASPNETCore_Sync_Async_EF.Repository;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ASPNETCore_Sync_Async_EF.Apis
@@ -22,7 +20,7 @@ namespace ASPNETCore_Sync_Async_EF.Apis
             _Logger = loggerFactory.CreateLogger(nameof(CustomersApiController));
         }
 
-        // GET api/customers
+        // GET api/async/customers
         [HttpGet]
         public async Task<ActionResult> Customers()
         {
@@ -38,7 +36,7 @@ namespace ASPNETCore_Sync_Async_EF.Apis
             }
         }
 
-        // GET api/customers/page/10/10
+        // GET api/async/customers/page/10/10
         [HttpGet("page/{skip}/{take}")]
         public async Task<ActionResult> CustomersPage(int skip, int take)
         {
@@ -55,7 +53,7 @@ namespace ASPNETCore_Sync_Async_EF.Apis
             }
         }
 
-        // GET api/customers/5
+        // GET api/async/customers/5
         [HttpGet("{id}")]
         public async Task<ActionResult> Customers(int id)
         {
@@ -70,8 +68,5 @@ namespace ASPNETCore_Sync_Async_EF.Apis
                 return BadRequest(new { Status = false });
             }
         }
-
-
-
     }
 }
