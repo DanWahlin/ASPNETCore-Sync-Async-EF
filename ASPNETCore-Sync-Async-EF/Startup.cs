@@ -27,15 +27,15 @@ namespace ASPNETCore_Sync_Async_EF
         {
 
             //Add SQL Server support
-            //services.AddDbContext<CustomersDbContext>(context =>
+            //services.AddDbContext<CustomersDbContext>(options =>
             //{
-            //    context.UseSqlServer(Configuration.GetConnectionString("CustomersSqlServerConnectionString"));
+            //    options.UseSqlServer(Configuration.GetConnectionString("CustomersSqlServerConnectionString"));
             //});
 
             //Add SqLite support
-            services.AddDbContext<CustomersDbContext>(context =>
+            services.AddDbContext<CustomersDbContext>(options =>
             {
-                context.UseSqlite(Configuration.GetConnectionString("CustomersSqliteConnectionString"));
+                options.UseSqlite(Configuration.GetConnectionString("CustomersSqliteConnectionString"));
             });
             
             // Add framework services.

@@ -1,24 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+import { Observable } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
-@Injectable()
+
+@Injectable({
+    providedIn: 'root'
+})
 export class DataService {
     
-    constructor(private http: Http) { }
+    constructor(private http: HttpClient) { }
 
     getCustomers() {
         return this.http.get('http://localhost:5000/api/async/customers')
-                   .map((res: Response) => res.json())
-                   .catch((err) => {
+            .pipe(
+                   catchError((err) => {
                        const msg = 'Error getting customers';
                        console.log(msg);
                        return Observable.throw(msg);
-                   });
+                   })
+                );
     }
 
 }

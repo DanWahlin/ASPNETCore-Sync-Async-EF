@@ -7,7 +7,7 @@ import { DataService } from 'app/data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  customers = [];
+  customers: any = [];
 
   constructor(private dataService: DataService) {}
 
